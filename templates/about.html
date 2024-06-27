@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<title>ML Model Hub</title>
+		{{ bootstrap.load_css() }}
+		<link
+			rel="stylesheet"
+			href="/static/styles.css" />
+	</head>
+	<body>
+		<div class="container mb-auto">
+			<header class="d-flex flex-wrap justify-content-center mb-4 border-bottom header">
+				<a
+					href="https://www.databricks.com/glossary/machine-learning-models"
+					class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+					<span class="fs-4">ML MODELS</span>
+				</a>
+
+				<ul class="nav nav-pills">
+					<li class="nav-item">
+						<a
+							href="{{ url_for('home') }}"
+							class="nav-link"
+							aria-current="page"
+							>Home</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							href="{{ url_for('predict_model') }}"
+							class="nav-link"
+							>Predict Car Price</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							href="#"
+							class="nav-link"
+							>Predict-2</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							href="{{ url_for('about') }}"
+							class="nav-link active"
+							>About</a
+						>
+					</li>
+				</ul>
+			</header>
+		</div>
+        <h1>
+            This is a Webapp developed to use the ML models in an easy way to predict things. 
+        </h1>
+        <h3>
+        <br>This project is done by:</h3></br>
+        Susmit Kumar Pandey - 1CR21AD053<br>
+        Sathvik Sanisetty - 1CR21AD047</br>
+        Soumya Raj - 1CR21AD051
+	</body>
+</html>

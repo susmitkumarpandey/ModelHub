@@ -1,0 +1,58 @@
+.parent{
+    padding: 0;
+    margin: 0;
+}
+.sectionHome,.sectionPredict{
+    padding: 20px;
+}
+.sectionHome{
+    background: url(https://images.pexels.com/photos/17485657/pexels-photo-17485657/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-depicts-how-ai-could-adapt-to-an-infinite-amount-of-uses-it-was-created-by-nidia-dias-as-part-of-the-visualising-ai-pr.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+
+.bgimg{
+    background: url(https://images.pexels.com/photos/1685111/pexels-photo-1685111.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header{
+    padding: 10px;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 30px 10px;
+}
+.form{
+    /* width: 700px; */
+    min-width: 400px;
+    max-width: max-content;
+    padding: 20px;
+    backdrop-filter: blur(15px);
+    /* width: max-content; */
+    background-color: rgba(255, 255, 255, 0.265); 
+}
+.result{
+    min-width: 400px;
+    max-width: max-content;
+    padding: 20px;
+    /* backdrop-filter: blur(1px); */
+    background-color: rgba(255, 255, 255, 0.265); 
+}
+
+.mainContent{
+    height: 84vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+}

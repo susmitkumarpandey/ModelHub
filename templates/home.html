@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<title>ML Model Hub</title>
+		{{ bootstrap.load_css() }}
+		<link
+			rel="stylesheet"
+			href="/static/styles.css" />
+	</head>
+	<body>
+		<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+			<section class="sectionHome">
+				<header class="mb-auto">
+					<div class="container">
+						<header class="d-flex flex-wrap justify-content-center mb-4 border-bottom header">
+							<a
+								href="https://www.databricks.com/glossary/machine-learning-models"
+								class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+								<span class="fs-4">ML MODELS</span>
+							</a>
+
+							<ul class="nav nav-pills">
+								<li class="nav-item">
+									<a
+										href="{{ url_for('home') }}"
+										class="nav-link active"
+										aria-current="page"
+										>Home</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										href="{{ url_for('predict_model') }}"
+										class="nav-link"
+										>Predict Car Price</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										>Predict-2</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										href="{{ url_for('about') }}"
+										class="nav-link"
+										>About</a
+									>
+								</li>
+							</ul>
+						</header>
+					</div>
+				</header>
+
+				<main class="px-3 mainContent">
+					<h1>A PLATFORM TO USE ML MODELS TO PREDICT DATA</h1>
+					<p class="lead">
+						<strong>
+							We provide you a platform to use ML Models without having any Technical
+							Knowledge.</strong
+						>
+					</p>
+				</main>
+			</section>
+
+			<!-- <footer class="mt-auto text-black-50 footer">
+				<p>MINI PROJECT by SATVIK, SOUMYA And SUSMIT .</p>
+			</footer> -->
+		</div>
+		{{ bootstrap.load_js() }}
+	</body>
+</html>

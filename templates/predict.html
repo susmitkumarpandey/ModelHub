@@ -1,0 +1,119 @@
+{% from 'bootstrap5/form.html' import render_form %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		{{ bootstrap.load_css() }}
+		<link
+			rel="stylesheet"
+			href="/static/styles.css" />
+		<title>Predict</title>
+	</head>
+	<body class="bgimg">
+		<section class="sectionPredict">
+			<header class="mb-auto">
+				<div class="container">
+					<header class="d-flex flex-wrap justify-content-center mb-4 border-bottom header">
+						<a
+							href="https://www.databricks.com/glossary/machine-learning-models"
+							class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+							<span class="fs-4">ML MODELS</span>
+						</a>
+
+						<ul class="nav nav-pills">
+							<li class="nav-item">
+								<a
+									href="{{ url_for('home') }}"
+									class="nav-link"
+									aria-current="page"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="{{ url_for('predict_model') }}"
+									class="nav-link active"
+									>Predict Car Price</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="#"
+									class="nav-link"
+									>Predict-2</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									href="{{ url_for('about') }}"
+									class="nav-link"
+									>About</a
+								>
+							</li>
+						</ul>
+					</header>
+				</div>
+			</header>
+		</section>
+		<section class="content">
+			<div class="form">
+				<h1>Car Price Predict</h1>
+				<form
+					c;ass="sectionPredict content"
+					action="{{url_for('predict_model')}}"
+					method="post">
+					<label for="company">Car Company:</label><br />
+					<select
+						id="company"
+						name="company">
+						{% for company in companies %}
+						<option value="{{company}}">{{company}}</option>
+						{%endfor%}
+					</select>
+					<br />
+					<label for="model">Car Model:</label><br />
+					<select
+						id="model"
+						name="model">
+						{% for model in models %}
+						<option value="{{model}}">{{model}}</option>
+						{%endfor%}</select
+					><br />
+					<label for="year">Year of Purchase: </label><br />
+					<input
+						type="number"
+						name="year"
+						id="year"
+						min="1900"
+						max="2024"
+						step="1"
+						value="2023" /><br />
+					<label for="dist">Distance Travelled:</label><br />
+					<input
+						type="number"
+						name="dist"
+						id="year"
+						min="0" /><br />
+					<label for="ftype">Fuel Type</label><br />
+					<select
+						id="ftype"
+						name="ftype">
+						<option value="Petrol">Petrol</option>
+						<option value="Diesel">Diesel</option></select
+					><br />
+					<button type="submit">Predict</button>
+				</form>
+			</div>
+			<div class="result">
+				<br />{% if prediction_text %}
+				<h3>{{ prediction_text }}</h3>
+				{% endif %}
+			</div>
+		</section>
+		{{ bootstrap.load_js() }}
+	</body>
+</html>
